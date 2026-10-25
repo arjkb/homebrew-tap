@@ -8,6 +8,12 @@ class Zstdir < Formula
   license "GPL-3.0-only"
   head "https://github.com/arjkb/zstdir.git", branch: "main"
 
+  bottle do
+    root_url "https://github.com/arjkb/homebrew-tap/releases/download/zstdir-0.1.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "f8dd744f7d224feb756f9cc0f92d7c4072dca2142242c03cadb51808a83e4dc5"
+    sha256 cellar: :any,                 x86_64_linux: "6f49b13496f13e4380e379dd58e169a3250fbb34c5da8757845dc53cdacb3233"
+  end
+
   depends_on "go" => :build
 
   def install
